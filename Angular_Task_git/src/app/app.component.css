@@ -1,0 +1,347 @@
+
+/*#head{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 2px solid rgb(168, 163, 163);
+    box-shadow: 2px 2px 6px rgb(211, 210, 210);
+    background-color: rgb(238, 238, 238);
+    flex-direction: row;
+}
+*/
+h1{
+    margin-left: 6%;
+    margin-top: 2%;
+    margin-right: 8%;
+    text-align: center;
+    color: #1952ce;
+}
+
+label{
+    font-family :'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+input{
+    margin: 30%;
+    font-size: 15px; 
+    margin: 20px 0;
+    width: 90%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+input:focus{
+   background-color: lightgreen;
+}
+input:hover{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+}
+#submit{
+    background-color: lightgreen;
+}
+#submit:hover{
+   
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+}
+textarea {
+    margin: 20px 0;
+    width: 90%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;   
+}
+textarea:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+}
+select{
+    margin: 20px 0;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px; 
+}
+select:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+}
+
+.input-group.success input{
+    border-color: #0cc477;
+}
+
+.input-group.err input{
+    border-color:rgb(206, 67, 67);
+}
+
+.input-group.success select{
+    border-color: #0cc477;
+}
+
+.input-group.err select{
+    border-color:rgb(206, 67, 67);
+}
+.input-group.success textarea {
+    border-color: #0cc477;
+}
+
+.input-group.err textarea {
+    border-color:rgb(168, 63, 63);
+}
+button{
+    width: 100%;
+    border-radius: 5px;
+    padding:10px;
+    margin:20px 0px;
+    cursor:pointer;
+    font-size:20px;
+    box-shadow: 3px 2px 5px px black;
+    height: 60px;
+}
+
+nav{
+    background-color: rgb(58, 221, 145);
+    height: 50px;
+    display: flex;
+}
+
+nav  navbar{
+   color: blue;
+   display: flex;
+   justify-content: center;
+   font-style: italic;
+   font-size: 35px;
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+ 
+  }
+nav  navbar:hover{
+    color: blue;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    font-size: 50px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  
+   }
+nav h2{
+    color: blue;
+    margin-right: 20%;
+    float: right;
+   
+}
+#newele{
+    margin-top: 0;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.grid-container{   
+    padding-top: 2%;
+    padding-left: 2%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2%;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-areas: 
+     "name email college phnumber"
+     "percent employid designation address"
+     "role department gender bloodgroup"
+     "dob experience aa bb"
+     
+    ;
+}
+.grid-item1{
+    grid-area: name;
+  
+}
+.grid-item2{
+    grid-area: email;
+}
+.grid-item3{
+    grid-area: college;
+}
+.grid-item4{
+    grid-area: phnumber;
+}
+.grid-item5{
+    grid-area: percent;
+}
+.grid-item6{
+    grid-area: employid;
+}
+.grid-item7{
+    grid-area: designation;
+}
+.grid-item8{
+    grid-area: address;
+}
+.grid-item9{
+    grid-area: role;
+}
+.grid-item10{
+    grid-area: department;
+}
+.grid-item11{
+    grid-area: gender;
+}
+.grid-item12{
+    grid-area: bloodgroup;
+}
+.grid-item13{
+    grid-area: dob;
+}
+.grid-item14{
+    grid-area: experience;
+   
+}
+.grid-item14 input,label{
+    width: fit-content;
+    margin-top: 15%;
+   
+}
+.grid-item15{
+    grid-area: aa;
+}
+.grid-item16{
+    grid-area: bb;
+}
+
+
+
+
+#submit{
+   
+  margin-top: 1%;
+    width: 7%;
+    padding:10px;
+   text-align: center;
+    cursor:pointer;
+ 
+    box-shadow: 3px 2px 5px px black;
+    height: 40px;
+    float: right;
+    margin-left: 7% !important;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#submit:hover{
+    background-color: #3e8e41;
+    animation: pulse 0.5s;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  #reset{
+   
+    margin-top: 1%;
+    width: 7%;
+    padding:10px;
+   text-align: center;
+    cursor:pointer;
+ 
+    box-shadow: 3px 2px 5px px black;
+    height: 40px;
+    float: right;
+
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#reset:hover{
+    background-color: #3e8e41;
+    animation: pulsee 0.5s;
+}
+
+@keyframes pulsee {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+/* 
+#reset{
+   
+    background-color: rgb(148, 212, 151);
+    width: 7%;
+    border-radius: 5px;
+    padding:10px;
+   text-align: center;
+    cursor:pointer;
+    font-size:20px;
+    box-shadow: 3px 2px 5px px black;
+    height: 40px;
+    float: right;
+} */
+.grid-item19{
+    grid-area: reset;
+    background-color: rgb(240, 56, 56);
+    width: 50%;
+    border-radius: 5px;
+    padding:10px;
+    margin:20px 0px;
+    cursor:pointer;
+    font-size:20px;
+    box-shadow: 3px 2px 5px px black;
+    height: 60px;
+}
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    background-color: rgb(116, 200, 221);
+}
+
+th {
+    background-color: #0e2952;
+    color: #fff;
+}
+
+
+.card{
+margin-right: 2%;
+}
+
+.succesbtn{
+    margin-bottom: 3%;
+   
+}
+
+
+
+
+
+
+
+
+
+ 

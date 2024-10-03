@@ -1,0 +1,175 @@
+
+
+<div class="mat-elevation-z8">
+  <div class="search-container" >
+    <div class="search-bar"  style="width: 100%;">
+      <input type="search" placeholder="Search.............." class="search-input">
+      
+      <button mat-icon-button class="animated-button animated-icon"  (click)="deleteAllData() ">
+        <mat-icon >delete</mat-icon>
+      </button>
+    </div>
+  </div>
+   <table>
+    <thead>
+
+  <tr>
+    <th  draggable="true"><input type="checkbox" (click)="toggleSelectAll($event)" [(ngModel)]="parentCheckbox"></th>
+    <th *ngFor="let column of displayedColumns; let i = index"
+            draggable="true"
+            (dragstart)="onDragStart($event, i)"
+            (dragover)="onDragOver($event)"
+            (drop)="onDrop($event, i)"
+            (dragend)="onDragEnd($event)">
+          {{ column }}
+        </th>
+     </thead>
+     <tr *ngFor="let row of users ">
+      <td  ><input type="checkbox"   [(ngModel)]="row.isActive" (click)="toggleSelectAll2(row)"></td>
+      <td > {{row.userName}} </td>
+      <td > {{row.email}} </td>
+      <td> {{row.collegeName}} </td>
+    <td  > {{row.phoneNumber}} </td>
+    <td  > {{row.percentage}} </td>
+    <td  > {{row.employeeId}} </td>
+    <td  > {{row.designation}} </td>
+    <td>{{row.address}}</td>
+    <td  > {{row.role}} </td>
+   <td> {{row.department}} </td>
+   <td  > {{row.gender}} </td>
+   <td>{{row.dob}}</td>
+    
+      <td> <button mat-icon-button class="animated-button animated-icon"   (click)="deleteData(row)"   (click)="reloadWindow()">
+        <mat-icon>delete</mat-icon>
+      </button>
+  
+      <button mat-icon-button class="animated-button animated-icon" (click)="editData(row)">
+        <mat-icon>edit</mat-icon>
+      </button></td>
+     <tbody>
+     
+     </tbody>
+   </table>
+    <!-- <table mat-able [dataSource]="users" >
+  
+<div class="mat-elevation-z8">
+  <div class="search-container" >
+    <div class="search-bar"  style="width: 100%;">
+      <input type="search" placeholder="Search" class="search-input">
+      <button class="search-button">
+        <i class="fas fa-search"></i>
+      </button>
+      <button mat-icon-button class="animated-button animated-icon">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+  </div>
+   <table>
+    
+   
+    <thead>
+      
+  <tr>
+    <th  draggable="true"><input type="checkbox" (click)="multipleindexall(this)" [(ngModel)]="checkboxvalue"></th>
+    <th  draggable="true"> Name </th>
+    <th  draggable="true"> Email </th>
+    <th   draggable="true"> College </th>
+    <th  draggable="true"> Phone Number </th>
+    <th  draggable="true"> Percentage </th>
+    <th  draggable="true"> EmployeeId </th>
+    <th  draggable="true"> Designation </th>
+    <th  draggable="true"> Address </th>
+    <th  draggable="true"> Role </th>
+    <th  draggable="true"> Department </th>
+    <th  draggable="true"> Gender </th>
+    <th  draggable="true"> Blood Group </th>
+    <th   draggable="true">Action</th>
+  </tr>
+  
+     </thead>
+  
+     <tbody>
+      <tr *ngFor="let row of users">
+        <td ><input type="checkbox" (click)="multipleindex(this)" [(ngModel)]="checkboxvalue"></td>
+        <td > {{row.usernamevalue}} </td>
+        <td > {{row.emailvalue}} </td>
+        <td> {{row.collegevalue}} </td>
+      <td  > {{row.phnumber}} </td>
+      <td  > {{row.percentagevalue}} </td>
+      <td  > {{row.employidvalue}} </td>
+      <td  > {{row.designationvalue}} </td>
+      <td>{{row.addressvalue}}</td>
+      <td  > {{row.rolevalue}} </td>
+     <td> {{row.departmentvalue}} </td>
+     <td  > {{row.gendervalue}} </td>
+     <td>{{row.dobvalue}}</td>
+     <td> <button mat-icon-button class="animated-button animated-icon"  >
+      <mat-icon>delete</mat-icon>
+    </button>
+
+    <button mat-icon-button class="animated-button animated-icon" >
+      <mat-icon>edit</mat-icon>
+    </button></td>
+      </tr>
+     </tbody>
+   </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <tr mat-header-row *matHeaderRowDef="['name', 'email', 'address', 'blood','college', 'department', 'designation', 'employid','gender', 'percentage', 'phnumber', 'role']">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <th mat-header-cell *matHeaderCellDef> College </th>
+        <th mat-header-cell *matHeaderCellDef> Phone Number </th>
+        <th mat-header-cell *matHeaderCellDef> Percentage </th>
+        <th mat-header-cell *matHeaderCellDef> EmployeeId </th>
+        <th mat-header-cell *matHeaderCellDef> Designation </th>
+        <th mat-header-cell *matHeaderCellDef> Address </th>
+        <th mat-header-cell *matHeaderCellDef> Role </th>
+        <th mat-header-cell *matHeaderCellDef> Department </th>
+        <th mat-header-cell *matHeaderCellDef> Gender </th>
+        <th mat-header-cell *matHeaderCellDef> Blood Group </th>
+      </tr> -->
+
+ 
+        <!-- <td mat-cell *matCellDef="let users"> {{users.namevalue}} </td>
+        <td mat-cell *matCellDef="let users"> {{users.emailvalue}} </td>
+        <td mat-cell *matCellDef="let users"> {{users.collegevalue}} </td>
+        <td mat-cell *matCellDef="let users"> {{users.phnumbervalue}} </td>
+        <td mat-cell *matCellDef="let users"> {{users.percentagevalue}} </td>
+        <td mat-cell *matCellDef="let users"> {{users.employidvalue}} </td>
+        <td mat-cell *matCellDef="let users"> {{users.employidvalue}} </td>
+        <td mat-cell *matCellDef="let users"> {{users.designationvalue}} </td>
+         <td mat-cell *matCellDef="let users"> {{users.addressvalue}} </td>
+        <td mat-cell *matCellDef="let users"> {{users.rolevalue}} </td>
+        <td mat-cell *matCellDef="let users"> {{users.departmentvalue}} </td>
+        <td mat-cell *matCellDef="let users"> {{users.gendervalue}} </td>
+        <td mat-cell *matCellDef="let users"> {{users.dobvalue}} </td> -->
+     
+      <!-- Position Column -->
+
+  
+    
+<!--   
+      <tr mat-header-row *matHeaderRowDef="['name', 'email', 'address', 'blood','college', 'department', 'designation', 'employid','gender', 'percentage', 'phnumber', 'role']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['name', 'email', 'address', 'blood','college', 'department', 'designation', 'employid','gender', 'percentage', 'phnumber', 'role'];"></tr>
+    </table> -->
+
+    
+    
+  </div>
+  <button >checking</button>
+  <script src="index.js"></script>

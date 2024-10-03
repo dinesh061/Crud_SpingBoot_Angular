@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    <div *ngIf="show" class="card" >  <app-crad [showmethod]="show"></app-crad></div>
+    <diV>
+        <div id="head"  >
+            <h1>Employee Details {{studentObj.usernamevalue}}</h1>
+          
+            
+            <form action=""  class="grid-container" id="form">     
+  
+               <div class="" class=" input-group grid-item1"  >
+                <label for="username" class="username" class="">Username:</label><br>
+                <input type="text" id="username" name="username" placeholder="Enter Your Name " [ngModelOptions]="{standalone: true}" class="username"  [(ngModel)]="studentObj.usernamevalue"  #username  >
+                <div class="error"></div>
+               </div>
+
+                <div class=" " class="input-group grid-item2" >
+                <label for="email" class="">Email:</label><br>
+                <input type="email" id="email" name="email"  placeholder="Enter Your Email "  value=""  [(ngModel)]="studentObj.emailvalue"  [ngModelOptions]="{standalone: true}"  class="">
+                <div class="error"></div>
+                </div>
+
+                <div class="input-group grid-item3" >
+                <label class="">College Name</label><br>
+                <input type="text" name="collegename" placeholder="Enter Your College Name " id="collegename"  class=""  [ngModelOptions]="{standalone: true}"  [(ngModel)]="studentObj.collegenamevalue"/>
+                <div class="error"></div>
+                </div>
+
+                <div class="input-group grid-item4">
+                <label class="">Phone Number</label><br>
+                <input type="text" id="phnumber" name="phnumber"  placeholder="Enter Your Phone Number " value=""  [ngModelOptions]="{standalone: true}" [(ngModel)]="studentObj.phnumbervalue"  class="" onchange="phone()"> 
+                <div class="error"></div>
+                </div>
+
+                <div  class="input-group grid-item5">
+                <label class="">Percentage</label><br>
+                <input type="number" id="Percentage" name="Percentage"  placeholder="Enter Your Percentage "   [ngModelOptions]="{standalone: true}" [(ngModel)]="studentObj.percentagevalue"  class="">
+                <div class="error"></div>
+                </div>
+
+                <div  class="input-group grid-item6">
+                <label class="">Employee Id</label><br>
+                <input type="number" id="employid" name="employid"  placeholder="Enter Your Employeeid "   [ngModelOptions]="{standalone: true}"  [(ngModel)]="studentObj.employidvalue" class="">
+                <div class="error"></div>
+                </div>
+
+                <div  class="input-group grid-item7">
+                <label class="">Designation</label><br>
+                <input type="text" name="designation" id="designation" placeholder="Enter Your Designation"   [ngModelOptions]="{standalone: true}" [(ngModel)]="studentObj.designationvalue"   class=""/>
+                <div class="error"></div>
+                </div>
+               
+                <div  class="input-group grid-item8">
+                  <label  class="">Address</label><br>
+                  <textarea  placeholder="Enter Your Address "  id="address"  class=""  [ngModelOptions]="{standalone: true}" [(ngModel)]="studentObj.addressvalue"></textarea>
+                  <div class="error"></div>
+              </div>
+
+                <div  class="input-group grid-item9">
+                <label class="">Role</label><br>
+                <select id="role" value=""   [(ngModel)]="studentObj.rolevalue"  [ngModelOptions]="{standalone: true}">
+                    <option label=""></option>
+                    <option label="Product Developer">Male</option>
+                    <option label="Associate Product Developer">Female</option>
+                    <option label="Senior Product Developer">Female</option>   
+                </select>
+                <div class="error"></div>
+                </div>
+
+                <div   class="input-group grid-item10">
+                    <label class="">Department</label><br>
+                    <select id="department"  [(ngModel)]="studentObj.departmentvalue"  [ngModelOptions]="{standalone: true}">
+    
+                        <option label=""></option>
+                        <option label="Admin">Admin</option>
+                        <option label="Hr">Hr</option>
+                        <option label="IT">IT</option>   
+                    </select>
+                    <div class="error"></div>
+                    </div>
+
+
+                <div   class="input-group grid-item11">
+                    <label class="">Gender</label><br>
+                    <select id="gender"   [(ngModel)]="studentObj.gendervalue"  [ngModelOptions]="{standalone: true}">
+                        <option label=""></option>
+                        <option label="Male">Male</option>
+                        <option label="Female">Female</option>
+                    </select>
+                    <div class="error"></div>
+                    </div>
+                
+                    <div  class="input-group grid-item12">
+                      <label  class="">Blood Group</label><br>
+                      <input type="text" id="blood" name="employid"  placeholder="Enter Your Blood Group "   [(ngModel)]="studentObj.bloodvalue"  [ngModelOptions]="{standalone: true}"  class="">
+                      <div class="error"></div>
+                  </div>  
+              
+                  <div  class="input-group grid-item13">
+                    <label  class="">DOB</label><br>
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                   <mat-datepicker #picker></mat-datepicker>
+                    <input matInput [matDatepicker]="picker"   id="dob" name="dob"  placeholder="Enter Your DOB "   [(ngModel)]="studentObj.dobvalue"  [ngModelOptions]="{standalone: true}"  class="">
+                  
+                   
+                    <div class="error"></div>
+                </div>  
+
+                <div  class="input-group grid-item14" id="Experience">
+                    <label  class="">Experience</label><br>
+                   
+                    <input type="radio" name="yesNo"  value="yes"  (click)="showinputyes()"> Yes
+                    <input type="text" *ngIf="showexperienceInput"/>
+                    <input type="radio" name="yesNo"  value="no"   (click)="showinputno()"> No
+                    <div class="error"></div>
+                </div> 
+
+
+                <!-- <div  class="" id="">
+                    <label  class="">Excel Upload</label><br>
+                   
+                    <input type="file" name="Excel" (change)="handleFileInput($event.target.files)">
+                    <button (click)="uploadFile()">Upload</button>
+                    <div class="error"></div>
+                </div>  -->
+                
+                <div  class="input-group grid-item15">
+                </div>  
+
+                <div  class="input-group grid-item16">
+                </div>  
+               
+            </form>
+           <div class="succesbtn">
+            <button id="reset"  class="grid-item" (click)="clearInputs()" >Reset</button>
+            <button id="submit" type="submit" class="grid-item" (click)="onFormSubmit()"  (click)="reloadWindow()">{{this.buttonObj.buttonText}}</button>
+           </div>
+           <div>
+
+
+           </div>
+           <br>
+        </div>
+    </diV>
+   
+  <br>
+  <br>
+  <br>
+
+
+
+    
+   <div *ngIf="true">
+    <app-validation [data]="studentObj"  (arroutput)="validationresponse($event)"></app-validation>
+   </div>
+
+   <!-- <div *ngIf="show"> -->
+   <app-table  [data]="studentObj"   [buttonupdate]="buttonObj" (editDatastatus)="editvalues($event)" (editRowUserIdStatus)="editRowIdvalues($event)"   #parent></app-table>
+   <!-- </div> -->
+
+</body>
+</html>
